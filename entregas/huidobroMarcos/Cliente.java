@@ -30,6 +30,11 @@ class Cliente {
 
 
 
+        partidoUno.registrarResultado(3, 1);
+        partidoDos.registrarResultado(2, 2);
+
+
+
 
 
         crearLiga()
