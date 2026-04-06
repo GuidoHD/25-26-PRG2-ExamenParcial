@@ -1,5 +1,9 @@
 package entregas.huidobroMarcos;
 
-public class Clasificacion {
-    
+class Clasificacion {
+    public Clasificacion clasificacion() {}
+    public String consultaClasificacion() {}
+    public void mostrar() {}
+    public String lider() {}
+    public String ultimo() {}
 }
