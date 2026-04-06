@@ -2,14 +2,6 @@ package entregas.huidobroMarcos;
 
 class Partido {
 
-    public Partido(Equipo local, Equipo visitante, String fecha) {
-    this.local = local;
-    this.visitante = visitante;
-    this.fecha = fecha;
-    this.pendiente = true;
-    this.golesLocal = 0;
-    this.golesVisitante = 0;
-    }
 
     private Equipo local;
     private Equipo visitante;
@@ -17,6 +9,18 @@ class Partido {
     private int golesLocal;
     private int golesVisitante;
     private boolean pendiente;
+
+
+    public Partido(Equipo local, Equipo visitante, String fecha) {
+        this.local = local;
+        this.visitante = visitante;
+        this.fecha = fecha;
+        this.pendiente = true;
+        this.golesLocal = 0;
+        this.golesVisitante = 0;
+    }
+
+    
 
     public String fecha() {
         return this.fecha;
@@ -42,6 +46,24 @@ class Partido {
     return "Partido reprogramado: " + mostrarResultados();
     }
 
+    public void registrarResultado(int golesLocal, int golesVisitante) {
+        this.golesLocal = golesLocal;
+        this.golesVisitante = golesVisitante;
+        this.pendiente = false;
 
-    
+        if (golesLocal > golesVisitante) {
+            local.añadirVictoria();
+        } else if (golesLocal < golesVisitante) {
+            visitante.añadirVictoria();
+        } else {
+            local.añadirEmpate();
+            visitante.añadirEmpate();
+        }
+
+        local.resultados(mostrarResultados());
+        visitante.resultados(mostrarResultados());
+    }
+
+
+
 }
