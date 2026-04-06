@@ -18,9 +18,30 @@ class Partido {
     private int golesVisitante;
     private boolean pendiente;
 
-    public String fecha() {}
-    public String preguntaEquipos() {}
-    public boolean estaPendiente() {}
-    public String mostrarResultados() {}
-    public String reprogramarPartido() {}
+    public String fecha() {
+        return this.fecha;
+    }
+    public String preguntaEquipos() {
+        return local.mostrarInformacion() + "VS" visitante.mostrarInformacion();
+        
+    }
+    
+    public boolean estaPendiente() {
+    return this.pendiente;
+    }
+
+    public String mostrarResultados() {
+    if (pendiente) {
+        return fecha + " | " + local.mostrarInformacion() + " vs " + visitante.mostrarInformacion() + " - pendiente";
+    }
+    return fecha + " | " + local.mostrarInformacion() + " " + golesLocal + " - " + golesVisitante + " " + visitante.mostrarInformacion();
+    }
+
+    public String reprogramarPartido() {
+    this.pendiente = true;
+    return "Partido reprogramado: " + mostrarResultados();
+    }
+
+
+    
 }

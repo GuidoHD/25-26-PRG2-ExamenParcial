@@ -48,7 +48,7 @@ class Equipo {
         return nombre + " - " + puntos + " puntos";
     }
 
-    public String mostrarInfo() {
+    public String mostrarInformacion() {
         return "Equipo: " + nombre + " | Color: " + color + " | Jugadores: " + jugadores + " | Puntos: " + puntos + " puntos";
     }
 
@@ -63,6 +63,6 @@ class Equipo {
     }
 
     public String consultarEquipo() {
-        return mostrarInfo();
+        return mostrarInformacion();
     }
 }
