@@ -28,8 +28,28 @@ class Liga {
         this.partidos.add(partido);
     }
 
-    public String Equipos() {}
-    public String Clasificacion() {}
-    public String Partidos() {}
-    public void crearLiga() {}
+    public String Equipos() {
+    String resultado = "";
+    for (Equipo equipo : equipos) {
+        resultado += equipo.mostrarInformacion() + "\n";
+    }
+    return resultado;
+    }
+
+    public String Clasificacion() {
+        return clasificacion.consultaClasificacion();
+    }
+
+    public String Partidos() {
+        String resultado = "";
+        for (Partido partido : partidos) {
+            resultado += partido.mostrarResultados() + "\n";
+        }
+        return resultado;
+    }
+
+    public void crearLiga(String nombre) {
+        this.nombre = nombre;
+    }
+    
 }
