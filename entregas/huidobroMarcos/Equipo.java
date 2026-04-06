@@ -8,6 +8,7 @@ class Equipo {
     private String color;
     private int puntos;
     private int jugadores;
+    private ArrayList<String> partidos;
 
 
     public Equipo equipo() {
@@ -19,6 +20,7 @@ class Equipo {
         this.color = "";
         this.puntos = 0;
         this.jugadores = 0;
+        this.partidos = new ArrayList<>();
     }
 
 
