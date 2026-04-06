@@ -22,14 +22,45 @@ class Equipo {
     }
 
 
-    public void resultados(String resultados) {}
-    public int numeroJugadores(int jugadores) {}
-    public void sumarJugador(int jugadores) {}
-    public void añadirVictoria() {}
-    public void añadirEmpate() {}
-    public String mostrarPuntos() {}
-    public String mostrarInfo() {}
-    public String color() {}
-    public void verPartidos() {}
-    public String consultarEquipo() {}
+    public void resultados(String resultados) {
+        this.partidos.add(resultados);
+    }
+
+    public int numero_Jugadores(int jugadores) {
+        return this.jugadores;
+    }
+
+    public void sumarJugador(int jugadores) {
+        this.jugadores += jugadores;
+    }
+
+    public void añadirVictoria() {
+        this.puntos += 3;
+    }
+
+    public void añadirEmpate() {
+        this.puntos += 1;
+    }
+
+    public String mostrarPuntos() {
+        return nombre + " - " + puntos + " puntos";
+    }
+
+    public String mostrarInfo() {
+        return "Equipo: " + nombre + " | Color: " + color + " | Jugadores: " + jugadores + " | Puntos: " + puntos + " puntos";
+    }
+
+    public String color() {
+        return this.color;
+    }
+
+    public void verPartidos() {
+        for (String partido : partidos) {
+            System.out.println(partido);
+        }
+    }
+
+    public String consultarEquipo() {
+        return mostrarInfo();
+    }
 }
