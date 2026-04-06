@@ -10,7 +10,10 @@ class Equipo {
     private int jugadores;
 
 
-    public Equipo equipo() {}
+    public Equipo equipo() {
+        return new Equipo("");
+    }
+    
     public Equipo(String nombre) {}
     public void resultados(String resultados) {}
     public int numeroJugadores(int jugadores) {}
