@@ -4,7 +4,7 @@ class Cliente {
     public static void main(String[] args) {
         
         Liga liga = new Liga();
-        liga.crearLiga("Liga Universitaria Santander - Temporada 2025/26");
+        liga.crearLiga();
 
         Equipo losCracks = new Equipo("Los Cracks");
         losCracks.sumarJugador(8);

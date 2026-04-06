@@ -65,4 +65,10 @@ class Equipo {
     public String consultarEquipo() {
         return mostrarInformacion();
     }
+
+    public int getPuntos() {
+        return this.puntos;
+    }
+
+
 }
