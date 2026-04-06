@@ -18,9 +18,38 @@ class Clasificacion {
         this.equipos.add(equipo);
     }
 
-    
-    public String consultaClasificacion() {}
-    public void mostrar() {}
-    public String lider() {}
-    public String ultimo() {}
+
+    public String consultaClasificacion() {
+    String resultado = "";
+    for (Equipo equipo : equipos) {
+        resultado += equipo.mostrarPuntos() + "\n";
+    }
+    return resultado;
+}
+
+    public void mostrar() {
+        System.out.println(consultaClasificacion());
+    }
+
+    public String lider() {
+    Equipo lider = equipos.get(0);
+    for (Equipo equipo : equipos) {
+        if (equipo.getPuntos() > lider.getPuntos()) {
+            lider = equipo;
+        }
+    }
+    return "Lider: " + lider.mostrarInformacion();
+    }
+
+    public String ultimo() {
+        Equipo ultimo = equipos.get(0);
+        for (Equipo equipo : equipos) {
+            if (equipo.getPuntos() < ultimo.getPuntos()) {
+                ultimo = equipo;
+            }
+        }
+        return "Ultimo: " + ultimo.mostrarInformacion();
+    }
+
+
 }
