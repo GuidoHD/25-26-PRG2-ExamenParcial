@@ -13,8 +13,15 @@ class Equipo {
     public Equipo equipo() {
         return new Equipo("");
     }
-    
-    public Equipo(String nombre) {}
+
+    public Equipo(String nombre) {
+        this.nombre = nombre;
+        this.color = "";
+        this.puntos = 0;
+        this.jugadores = 0;
+    }
+
+
     public void resultados(String resultados) {}
     public int numeroJugadores(int jugadores) {}
     public void sumarJugador(int jugadores) {}
