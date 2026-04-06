@@ -34,14 +34,21 @@ class Cliente {
         partidoDos.registrarResultado(2, 2);
 
 
+        System.out.println(liga.Partidos());
+
+        // Reprogramar partido
+        System.out.println(partidoTres.reprogramarPartido());
+
+        // Consultar clasificacion
+        System.out.println(liga.Clasificacion());
+
+        // Consultar equipo
+        System.out.println(losCracks.consultarEquipo());
+
+        // Jugadores de un equipo
+        System.out.println(losCracks.numero_Jugadores(0));
 
 
-
-        crearLiga()
-        partidosPendientes()
-        reprogramarPartido()
-        consultarClasificacion()
-        consultarEquipo()
-        jugadoresEquipo()
+        
     }
 }

@@ -48,8 +48,8 @@ class Liga {
         return resultado;
     }
 
-    public void crearLiga(String nombre) {
-        this.nombre = nombre;
+    public void crearLiga() {
+        this.nombre = "Liga Universitaria Santander - Temporada 2025/26";
     }
-    
+
 }
