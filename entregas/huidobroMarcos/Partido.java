@@ -26,7 +26,7 @@ class Partido {
         return this.fecha;
     }
     public String preguntaEquipos() {
-        return local.mostrarInformacion() + "VS" visitante.mostrarInformacion();
+        return local.mostrarInformacion() + "VS" +  visitante.mostrarInformacion();
         
     }
     
